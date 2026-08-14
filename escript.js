@@ -3,7 +3,8 @@ const resultDiv = document.getElementById('result');
 const historyList = document.getElementById('history-list');
 const historyContainer = document.getElementById('history-container');
 
-let history = []; // Array que vai guardar as contas
+// Mudei o nome para 'historicoContas' para evitar conflito com o navegador
+let historicoContas = []; 
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -34,7 +35,7 @@ form.addEventListener('submit', function(event) {
     // Só adiciona ao histórico se não for um erro
     if (result !== 'Erro: Divisão por zero') {
         const entry = `${num1} ${symbol} ${num2} = ${result}`;
-        history.push(entry);
+        historicoContas.push(entry);
         updateHistoryUI();
     }
 });
@@ -42,7 +43,7 @@ form.addEventListener('submit', function(event) {
 // Função para atualizar a lista do histórico na tela
 function updateHistoryUI() {
     historyList.innerHTML = '';
-    history.forEach(item => {
+    historicoContas.forEach(item => {
         const li = document.createElement('li');
         li.textContent = item;
         historyList.appendChild(li);
@@ -58,9 +59,9 @@ function toggleHistory() {
     }
 }
 
-// Função para zerar o array de histórico e sumir com ele da tela
+// Função para zerar o array de histórico e limpar a tela
 function limparHistorico() {
-    history = [];
+    historicoContas = [];
     updateHistoryUI();
 }
 
