@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cauculadora simples</title>
+    <title>Calculadora simples</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
 <div class="container">
@@ -20,10 +19,13 @@
             <option value="divide">Dividir</option>
         </select>
         <button type="submit">Calcular</button>
+        <!-- Botão de limpar dentro do container/form -->
+        <button type="button" class="btn-clear" onclick="limparResultado()">C</button>
     </form>
+    
     <div id="result"></div>
-    <script src="escript.js"></script>
-   <button class="btn-clear" onclick="limparResultado()">C</button>
+</div>
 
+<script src="escript.js"></script>
 </body>
 </html>
