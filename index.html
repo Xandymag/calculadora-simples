@@ -19,23 +19,21 @@
             <option value="divide">Dividir</option>
         </select>
         <button type="submit">Calcular</button>
-        <!-- Botão de limpar dentro do container/form -->
         <button type="button" class="btn-clear" onclick="limparResultado()">Limpar</button>
+        <!-- Botão histórico agora dentro do form/container -->
+        <button type="button" class="btn-history" onclick="toggleHistory()">Histórico</button>
     </form>
-    
+   
     <div id="result"></div>
+
+    <!-- Container do histórico agora dentro do container principal -->
+    <div id="history-container" style="display: none; margin-top: 15px;">
+        <h3>Histórico de Cálculos:</h3>
+        <ul id="history-list"></ul>
+        <button type="button" class="btn-clear-history" onclick="limparHistorico()">Limpar Histórico</button>
+    </div>
 </div>
 
-<button type="button" class="btn-history" onclick="toggleHistory()">Histórico</button>
-
-<div id="result"></div>
-
-<!-- Container do histórico -->
-<div id="history-container" style="display: none; margin-top: 15px;">
-    <h3>Histórico de Cálculos:</h3>
-    <ul id="history-list"></ul>
-    <button type="button" class="btn-clear-history" onclick="limparHistorico()">Limpar Histórico</button>
-</div>
 <script src="escript.js"></script>
 </body>
 </html>
