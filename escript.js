@@ -31,24 +31,3 @@ function limparResultado() {
     document.getElementById("num2").value = "";
 
 }
-const historyList = document.getElementById('history-list');
-let history = [];
-
-form.addEventListener('submit', function(event) {
-    // (seu código de cálculo já existente fica aqui...)
-    
-    // Após calcular, adicione estas linhas para o histórico:
-    const entry = `${num1} ${operation} ${num2} = ${result}`;
-    history.push(entry);
-    
-    updateHistoryUI();
-});
-
-function updateHistoryUI() {
-    historyList.innerHTML = '';
-    history.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        historyList.appendChild(li);
-    });
-}
